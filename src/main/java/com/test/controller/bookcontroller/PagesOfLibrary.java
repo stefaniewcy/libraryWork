@@ -1,10 +1,12 @@
 package com.test.controller.bookcontroller;
 
 
-import com.test.DAO.BookDAO;
+import com.test.DAO.BookDAO2;
+import com.test.DAO.Impl.BookDAOImpl;
 import com.test.controller.ResultController.Result;
 import com.test.model.bookstore.Book;
 import com.test.service.BookService;
+import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -23,7 +25,7 @@ public class PagesOfLibrary {
     BookService bookService;
 
     @Resource
-    BookDAO bookDAO;
+    BookDAO2 bookDAO2 ;
 
     /**
      * 增加图书
@@ -81,6 +83,23 @@ public class PagesOfLibrary {
         List<Book> books = bookService.queryBookBySql(currPage ,pageSize) ;
         return result((books == null ? 0 : 1), null, null, books);
     }
+
+    @RequestMapping("/get")
+    @ResponseBody
+    public Result saveBook(Book book){
+        try {
+            if(book == null)
+                throw new Exception("不能保存空数据") ;
+            Book rBook = bookDAO2.getBookById(book.getId()) ;
+            //sqlSessionTemplate.getMapper() ;
+            return result(1,null,null,rBook) ;
+        }catch (Exception e){
+            e.printStackTrace();
+            return result(0,"failed",e.getMessage(),book) ;
+        }
+
+
+    }
     public Result result(int type, String status, String message, List<Book> books) {
         Result result = new Result();
         result.setType(type);
@@ -93,8 +112,11 @@ public class PagesOfLibrary {
         return result;
     }
 
+
     public Result result(int type, String status, String message, Book... books) {
-        List<Book> books1 = Arrays.asList(books);
+        List<Book> books1 =null ;
+        if(books!=null)
+            books1 = Arrays.asList(books);
         return result(type, status, message, books1);
     }
 }

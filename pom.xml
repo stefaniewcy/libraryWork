@@ -9,6 +9,8 @@
     <version>1.0-SNAPSHOT</version>
 
     <dependencies>
+
+
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
@@ -99,92 +101,100 @@
             <artifactId>jstl</artifactId>
             <version>1.2</version>
         </dependency>
-<!--        &lt;!&ndash;soring boot&ndash;&gt;
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-security</artifactId>
-            </dependency>
+        <!-- https://mvnrepository.com/artifact/com.github.harryemartland/queryrunner -->
+        <!-- https://mvnrepository.com/artifact/commons-dbutils/commons-dbutils -->
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
-            <version>LATEST</version>
+            <groupId>commons-dbutils</groupId>
+            <artifactId>commons-dbutils</artifactId>
+            <version>1.7</version>
         </dependency>
-        &lt;!&ndash;spring security&ndash;&gt;
-        <dependency>
-            <groupId>org.springframework.security</groupId>
-            <artifactId>spring-security-bom</artifactId>
-            <version>5.1.3.RELEASE</version>
-        </dependency>
-        &lt;!&ndash;核心 - spring-security-core.jar&ndash;&gt;
-        &lt;!&ndash; https://mvnrepository.com/artifact/org.springframework.security/spring-security-core &ndash;&gt;
-        <dependency>
-            <groupId>org.springframework.security</groupId>
-            <artifactId>spring-security-core</artifactId>
-            <version>5.1.3.RELEASE</version>
-        </dependency>
-        &lt;!&ndash;远程处理 - spring-security-remoting.jar&ndash;&gt;
-        &lt;!&ndash; https://mvnrepository.com/artifact/org.springframework.security/spring-security-remoting &ndash;&gt;
-        <dependency>
-            <groupId>org.springframework.security</groupId>
-            <artifactId>spring-security-remoting</artifactId>
-            <version>5.1.3.RELEASE</version>
-        </dependency>
-        &lt;!&ndash;Web - spring-security-web.jar&ndash;&gt;
-        &lt;!&ndash; https://mvnrepository.com/artifact/org.springframework.security/spring-security-web &ndash;&gt;
-        <dependency>
-            <groupId>org.springframework.security</groupId>
-            <artifactId>spring-security-web</artifactId>
-            <version>5.1.3.RELEASE</version>
-        </dependency>
-        &lt;!&ndash;配置 - spring-security-config.jar&ndash;&gt;
-        &lt;!&ndash; https://mvnrepository.com/artifact/org.springframework.security/spring-security-config &ndash;&gt;
-        <dependency>
-            <groupId>org.springframework.security</groupId>
-            <artifactId>spring-security-config</artifactId>
-            <version>5.1.3.RELEASE</version>
-        </dependency>
-        &lt;!&ndash;LDAP身份验证和配置代码&ndash;&gt;
-        &lt;!&ndash; https://mvnrepository.com/artifact/org.springframework.security/spring-security-ldap &ndash;&gt;
-        <dependency>
-            <groupId>org.springframework.security</groupId>
-            <artifactId>spring-security-ldap</artifactId>
-            <version>5.1.3.RELEASE</version>
-        </dependency>
-        &lt;!&ndash;OAuth 2.0核心 - spring-security-oauth2-core.jar&ndash;&gt;
-        &lt;!&ndash; https://mvnrepository.com/artifact/org.springframework.security/spring-security-oauth2-core &ndash;&gt;
-        <dependency>
-            <groupId>org.springframework.security</groupId>
-            <artifactId>spring-security-oauth2-core</artifactId>
-            <version>5.1.3.RELEASE</version>
-        </dependency>
-        &lt;!&ndash;OAuth 2.0客户端 - spring-security-oauth2-client.jar&ndash;&gt;
-        &lt;!&ndash; https://mvnrepository.com/artifact/org.springframework.security/spring-security-oauth2-client &ndash;&gt;
-        <dependency>
-            <groupId>org.springframework.security</groupId>
-            <artifactId>spring-security-oauth2-client</artifactId>
-            <version>5.1.3.RELEASE</version>
-        </dependency>
-        &lt;!&ndash;OAuth 2.0 JOSE - spring-security-oauth2-jose.jar&ndash;&gt;
-        &lt;!&ndash; https://mvnrepository.com/artifact/org.springframework.security/spring-security-oauth2-jose &ndash;&gt;
-        <dependency>
-            <groupId>org.springframework.security</groupId>
-            <artifactId>spring-security-oauth2-jose</artifactId>
-            <version>5.1.3.RELEASE</version>
-        </dependency>
-        &lt;!&ndash;ACL - spring-security-acl.jar&ndash;&gt;
-        &lt;!&ndash; https://mvnrepository.com/artifact/org.springframework.security/spring-security-acl &ndash;&gt;
-        <dependency>
-            <groupId>org.springframework.security</groupId>
-            <artifactId>spring-security-acl</artifactId>
-            <version>5.1.3.RELEASE</version>
-        </dependency>
-        &lt;!&ndash;4.10 CAS - spring-security-cas.jar&ndash;&gt;
-        &lt;!&ndash; https://mvnrepository.com/artifact/org.springframework.security/spring-security-cas &ndash;&gt;
-        <dependency>
-            <groupId>org.springframework.security</groupId>
-            <artifactId>spring-security-cas</artifactId>
-            <version>5.1.3.RELEASE</version>
-        </dependency>-->
+
+        <!--        &lt;!&ndash;soring boot&ndash;&gt;
+                    <dependency>
+                        <groupId>org.springframework.boot</groupId>
+                        <artifactId>spring-boot-starter-security</artifactId>
+                    </dependency>
+                <dependency>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter</artifactId>
+                    <version>LATEST</version>
+                </dependency>
+                &lt;!&ndash;spring security&ndash;&gt;
+                <dependency>
+                    <groupId>org.springframework.security</groupId>
+                    <artifactId>spring-security-bom</artifactId>
+                    <version>5.1.3.RELEASE</version>
+                </dependency>
+                &lt;!&ndash;核心 - spring-security-core.jar&ndash;&gt;
+                &lt;!&ndash; https://mvnrepository.com/artifact/org.springframework.security/spring-security-core &ndash;&gt;
+                <dependency>
+                    <groupId>org.springframework.security</groupId>
+                    <artifactId>spring-security-core</artifactId>
+                    <version>5.1.3.RELEASE</version>
+                </dependency>
+                &lt;!&ndash;远程处理 - spring-security-remoting.jar&ndash;&gt;
+                &lt;!&ndash; https://mvnrepository.com/artifact/org.springframework.security/spring-security-remoting &ndash;&gt;
+                <dependency>
+                    <groupId>org.springframework.security</groupId>
+                    <artifactId>spring-security-remoting</artifactId>
+                    <version>5.1.3.RELEASE</version>
+                </dependency>
+                &lt;!&ndash;Web - spring-security-web.jar&ndash;&gt;
+                &lt;!&ndash; https://mvnrepository.com/artifact/org.springframework.security/spring-security-web &ndash;&gt;
+                <dependency>
+                    <groupId>org.springframework.security</groupId>
+                    <artifactId>spring-security-web</artifactId>
+                    <version>5.1.3.RELEASE</version>
+                </dependency>
+                &lt;!&ndash;配置 - spring-security-config.jar&ndash;&gt;
+                &lt;!&ndash; https://mvnrepository.com/artifact/org.springframework.security/spring-security-config &ndash;&gt;
+                <dependency>
+                    <groupId>org.springframework.security</groupId>
+                    <artifactId>spring-security-config</artifactId>
+                    <version>5.1.3.RELEASE</version>
+                </dependency>
+                &lt;!&ndash;LDAP身份验证和配置代码&ndash;&gt;
+                &lt;!&ndash; https://mvnrepository.com/artifact/org.springframework.security/spring-security-ldap &ndash;&gt;
+                <dependency>
+                    <groupId>org.springframework.security</groupId>
+                    <artifactId>spring-security-ldap</artifactId>
+                    <version>5.1.3.RELEASE</version>
+                </dependency>
+                &lt;!&ndash;OAuth 2.0核心 - spring-security-oauth2-core.jar&ndash;&gt;
+                &lt;!&ndash; https://mvnrepository.com/artifact/org.springframework.security/spring-security-oauth2-core &ndash;&gt;
+                <dependency>
+                    <groupId>org.springframework.security</groupId>
+                    <artifactId>spring-security-oauth2-core</artifactId>
+                    <version>5.1.3.RELEASE</version>
+                </dependency>
+                &lt;!&ndash;OAuth 2.0客户端 - spring-security-oauth2-client.jar&ndash;&gt;
+                &lt;!&ndash; https://mvnrepository.com/artifact/org.springframework.security/spring-security-oauth2-client &ndash;&gt;
+                <dependency>
+                    <groupId>org.springframework.security</groupId>
+                    <artifactId>spring-security-oauth2-client</artifactId>
+                    <version>5.1.3.RELEASE</version>
+                </dependency>
+                &lt;!&ndash;OAuth 2.0 JOSE - spring-security-oauth2-jose.jar&ndash;&gt;
+                &lt;!&ndash; https://mvnrepository.com/artifact/org.springframework.security/spring-security-oauth2-jose &ndash;&gt;
+                <dependency>
+                    <groupId>org.springframework.security</groupId>
+                    <artifactId>spring-security-oauth2-jose</artifactId>
+                    <version>5.1.3.RELEASE</version>
+                </dependency>
+                &lt;!&ndash;ACL - spring-security-acl.jar&ndash;&gt;
+                &lt;!&ndash; https://mvnrepository.com/artifact/org.springframework.security/spring-security-acl &ndash;&gt;
+                <dependency>
+                    <groupId>org.springframework.security</groupId>
+                    <artifactId>spring-security-acl</artifactId>
+                    <version>5.1.3.RELEASE</version>
+                </dependency>
+                &lt;!&ndash;4.10 CAS - spring-security-cas.jar&ndash;&gt;
+                &lt;!&ndash; https://mvnrepository.com/artifact/org.springframework.security/spring-security-cas &ndash;&gt;
+                <dependency>
+                    <groupId>org.springframework.security</groupId>
+                    <artifactId>spring-security-cas</artifactId>
+                    <version>5.1.3.RELEASE</version>
+                </dependency>-->
 
 
     </dependencies>

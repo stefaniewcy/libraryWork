@@ -28,7 +28,7 @@
 
     <select id="queryBookBySql" parameterType="map" resultType="com.test.model.bookstore.Book">
         select * from books limit #{currIndex} , #{pageSize}
-</select>
+    </select>
 
     <select id="getBook">
         select * from books 
